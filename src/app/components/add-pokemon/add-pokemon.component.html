@@ -1,0 +1,27 @@
+<div>
+    <form [formGroup]="search" (ngSubmit)="onSearchPokemon()">
+        <mat-form-field appearance="fill">
+            <mat-label>Enter Pokemon Name or ID</mat-label>
+            <input matInput  formControlName="PokeSearch" placeholder="Jigglypuff or 39">
+            <mat-hint>Press Enter</mat-hint>
+        </mat-form-field>
+    </form>
+</div>
+
+<div class="container">
+    <mat-card class="example-card" *ngIf="onSearch">
+        <img mat-card-image  class = "PokeImage" src="{{Pokemon_data.image}}" alt="Photo of ${{Pokemon_data.name}}">
+        <mat-card-content>
+          <p class="name_Pokemon">{{Pokemon_data.name}}</p>
+          <div class="types">
+            <mat-chip-list aria-label="Fish selection">
+              <mat-chip >{{Pokemon_data.type?.[0].type.name}}</mat-chip>
+              <mat-chip *ngIf="Pokemon_data.type?.length == 2" >{{Pokemon_data.type[1].type.name}}</mat-chip>
+            </mat-chip-list>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button mat-dialog-close color= "primary" (click)="AddPokemon_toDB()">Add Pokemon</button>
+        </mat-card-actions>
+      </mat-card>
+</div>

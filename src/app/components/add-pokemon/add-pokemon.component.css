@@ -1,0 +1,44 @@
+.example-card {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    padding-top: 30px;
+    margin: 30px auto;
+    width: 230px  ;
+    max-height: 500px;
+  }
+  
+  .container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+  } 
+  
+  .PokeImage{
+  
+    width: 220px;
+    height: 220px;
+  }
+  
+  .name_Pokemon{
+  
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    text-align:center;
+    margin: 10px auto 20px;
+  
+  }
+  
+  .name_Pokemon:first-letter {
+  
+    text-transform: uppercase;
+  
+  }
+  
+  .types{
+  
+    width: 230px;
+  }
